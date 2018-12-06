@@ -1,10 +1,20 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
-def home(request):
-    return render(request,'home/home.html')
+from app.models import Wheel
 
+
+def home(request):
+
+    # 获取轮播图数据
+    wheels = Wheel.objects.all()
+
+    data = {
+        'wheels':wheels
+    }
+
+
+    return render(request,'home/home.html',context=data)
 
 def market(request):
     return render(request,'market/market.html')
