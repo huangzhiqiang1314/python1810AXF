@@ -1,20 +1,47 @@
-header{
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
 
+body {
+	margin: 0;
+	padding: 0;
+	background: #eee;
+}
+
+header {
+    /* 320px >>>  16px*/
+    /* 400px >>>  ? */
+
+    /* docuemnt >>> font-size: 16px */
+    /* 320px >>> 1rem >>> 16px*/
+    /* 400px >>> 1rem >>> ? */
     width: 100%;
+
+    /* 320 >> 44px*/
+    /* 16px >> 1rem */
+    /* 44px >> ? rem */
+    /*height: 44px;*/
     height: 2.75rem;
-    background:#ffd601;
+    background: #ffd601;
     color: white;
     text-align: center;
     font-size: 1.5rem;
     line-height: 2.75rem;
-
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
 }
+
+/* 关于隐藏滚动条的设置,需要通过js的方式，屏幕宽度+20px; 后续还需要对应页面的内容设置会原来的大小(在对应js中操作)*/
 .hidescroll{
 	width: 100%;
 	height: 100%;
 	overflow-x: hidden;
 	overflow-y: auto;
-	padding:  0;
+	padding: 2.75rem 0;
 }
 #content {
 	/*width: 100%;*/
